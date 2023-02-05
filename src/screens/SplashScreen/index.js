@@ -1,11 +1,12 @@
 import React, {useEffect} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {Pallet} from '../../utils/colorPallet.js';
+import {Screen} from '../../utils/screenNames';
 
 export default function SplashScreen({navigation}) {
   useEffect(() => {
     setTimeout(() => {
-      navigation.replace('Home');
+      navigation.replace(Screen.HOME_PAGE);
     }, 3000);
   }, [navigation]);
 
