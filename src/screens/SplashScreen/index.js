@@ -1,12 +1,13 @@
 import React, {useEffect} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {Pallet} from '../../utils/colorPallet.js';
+import {Fonts} from '../../utils/fontSpecs.js';
 import {Screen} from '../../utils/screenNames';
 
 export default function SplashScreen({navigation}) {
   useEffect(() => {
     setTimeout(() => {
-      navigation.replace(Screen.HOME_PAGE);
+      navigation.replace(Screen.LOGIN_PAGE);
     }, 3000);
   }, [navigation]);
 
@@ -31,14 +32,17 @@ const styles = StyleSheet.create({
     fontSize: 30,
     textAlign: 'center',
     color: Pallet.primaryColorDarker,
+    fontFamily: Fonts.SAIRA_EC_SEMIBOLD,
   },
   author: {
     fontSize: 10,
     color: Pallet.black,
+    fontFamily: Fonts.SAIRA_EC_LIGHT,
   },
   message: {
     marginVertical: 10,
     fontSize: 13,
     color: Pallet.black,
+    fontFamily: Fonts.SAIRA_EC_THIN,
   },
 });

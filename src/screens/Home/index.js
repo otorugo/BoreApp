@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <View>
       <Text>value : {count}</Text>
-      <Button mode="contained" onPress={() => dispatch(increment())}>
+      <Button mode="elevated" onPress={() => dispatch(increment())}>
         Increase
       </Button>
     </View>
