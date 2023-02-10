@@ -3,5 +3,13 @@ export const Screen = {
   SPLASHSCREEN_PAGE: 'SPLASHSCREEN',
   LOGIN_PAGE: 'LOGIN',
   SIGNUP_PAGE: 'SIGNUP',
-  COUNT_RESUME_PAGE: 'COUNT_RESUME',
+};
+
+export const HomeScreen = {
+  ACCOUNT_RESUME_PAGE: 'ACCOUNT_RESUME',
+  CONFIG_PAGE: 'CONFIG',
+};
+
+export const AccountResumeScreen = {
+  MAIN_ACCOUNT_RESUME_PAGE: 'MAIN_ACCOUNT_RESUME',
 };
