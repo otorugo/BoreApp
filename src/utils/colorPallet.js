@@ -8,5 +8,6 @@ export const Pallet = {
   grayBackgroundDarker: '#B4CCC8',
   white: '#FFFFFF',
   black: '#000000',
-  grayLighter: '#FEFEFE',
+  grayLighter: '#E6E6E6',
+  gray: '#808080',
 };

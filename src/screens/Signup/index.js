@@ -9,7 +9,7 @@ import {Pallet} from '../../utils/colorPallet';
 import {useDispatch, useSelector} from 'react-redux';
 import {changeEmail, changePassword, loginUser} from '../../store/authSlice';
 
-export default function Login({navigation}) {
+export default function Signup({navigation}) {
   const {email, password} = useSelector(state => state.auth);
   const dispatch = useDispatch();
 
@@ -25,7 +25,20 @@ export default function Login({navigation}) {
         <View style={styles.image}>
           <SvgXml xml={savings} height="120" />
         </View>
-        <Text style={styles.titleText}>LOGIN</Text>
+        <Text style={styles.titleText}>SIGN UP</Text>
+        <TextInput
+          style={styles.input}
+          placeholder={'Nome'}
+          keyboardType="default"
+          mode="outlined"
+          maxLength={40}
+          // value={email}
+          // onChangeText={text => dispatch(changeEmail({text}))}
+          textColor={Pallet.black}
+          placeholderTextColor={Pallet.gray}
+          outlineColor={Pallet.gray}
+          activeOutlineColor={Pallet.primaryColorDarker}
+        />
         <TextInput
           style={styles.input}
           placeholder={'Email'}
@@ -63,10 +76,10 @@ export default function Login({navigation}) {
             backgroundColor: Pallet.primaryColorDarker,
           }}
           mode="elevated">
-          Entrar
+          Cadastrar
         </Button>
-        <Button onPress={() => navigation.replace(Screen.SIGNUP_PAGE)}>
-          Não tem conta? Faz agora!
+        <Button onPress={() => navigation.replace(Screen.LOGIN_PAGE)}>
+          Já tem conta? Entra ai!
         </Button>
       </ScrollView>
     </View>

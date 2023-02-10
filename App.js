@@ -14,6 +14,7 @@ import dataStore from './src/store/dataStore';
 import Login from './src/screens/Login';
 import {Pallet} from './src/utils/colorPallet';
 import {Fonts} from './src/utils/fontSpecs';
+import Signup from './src/screens/Signup';
 
 const fonts = {
   android: {
@@ -64,6 +65,7 @@ export default function App() {
             />
             <Stack.Screen name={Screen.HOME_PAGE} component={Home} />
             <Stack.Screen name={Screen.LOGIN_PAGE} component={Login} />
+            <Stack.Screen name={Screen.SIGNUP_PAGE} component={Signup} />
           </Stack.Navigator>
         </NavigationContainer>
       </PaperProvider>

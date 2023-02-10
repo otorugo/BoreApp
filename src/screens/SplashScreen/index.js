@@ -7,8 +7,8 @@ import {Screen} from '../../utils/screenNames';
 export default function SplashScreen({navigation}) {
   useEffect(() => {
     setTimeout(() => {
-      navigation.replace(Screen.LOGIN_PAGE);
-    }, 3000);
+      navigation.navigate(Screen.LOGIN_PAGE);
+    }, 2000);
   }, [navigation]);
 
   return (

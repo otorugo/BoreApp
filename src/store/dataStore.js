@@ -1,12 +1,12 @@
 import {configureStore} from '@reduxjs/toolkit';
-import counterReducer, {increment} from './counterSlice';
+import counterReducer from './counterSlice';
+import authReducer from './authSlice';
 
 const dataStore = configureStore({
   reducer: {
     counter: counterReducer,
+    auth: authReducer,
   },
 });
-
-dataStore.dispatch(increment());
 
 export default dataStore;

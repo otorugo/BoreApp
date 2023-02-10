@@ -1,23 +1,14 @@
-import {View, Text} from 'react-native';
-import React, {useEffect} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
-import {Button} from 'react-native-paper';
-import {increment} from '../../store/counterSlice';
+import React from 'react';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import CountResume from './sub-screens/CountResume';
+import {Screen} from '../../utils/screenNames';
+
+const Tab = createBottomTabNavigator();
 
 export default function Home() {
-  const count = useSelector(state => state.counter.value);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    console.log(count);
-  }, [count]);
-
   return (
-    <View>
-      <Text>value : {count}</Text>
-      <Button mode="elevated" onPress={() => dispatch(increment())}>
-        Increase
-      </Button>
-    </View>
+    <Tab.Navigator>
+      <Tab.Screen name={Screen.COUNT_RESUME_PAGE} component={CountResume} />
+    </Tab.Navigator>
   );
 }
